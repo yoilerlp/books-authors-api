@@ -6,14 +6,15 @@ import java.util.List;
 import java.util.Optional;
 
 public interface AuthorService {
-    public AuthorEntity save(AuthorEntity author);
-    public List<AuthorEntity> findAll();
+    AuthorEntity save(AuthorEntity author);
 
-    public Optional<AuthorEntity> findOne(long id);
+    List<AuthorEntity> findAll();
 
-    public boolean exists(long id);
+    Optional<AuthorEntity> findOne(long id);
 
-    public AuthorEntity partialUpdate(Long id, AuthorEntity authorAsEntity);
+    boolean exists(long id);
+
+    AuthorEntity partialUpdate(Long id, AuthorEntity authorAsEntity);
 
     void delete(Long id);
 }
